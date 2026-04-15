@@ -8,7 +8,6 @@ public class Assignment11 {
         int c = sc.nextInt();
         int max = Math.max(a, Math.max(b, c));
         int min = Math.min(a, Math.min(b, c));
-
         System.out.println("Max = " + max);
         System.out.println("Min = " + min);
     }
