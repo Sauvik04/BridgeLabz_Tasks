@@ -1,6 +1,5 @@
-import java.util.*;
 import java.util.Random;
-public class Assigment1 {
+public class Day4Assignment1 {
     public static void main(String[]args){
        int wage_per = 20;
        int full_time = 8;
