@@ -1,4 +1,5 @@
 import java.util.*;
+
 class Contact {
     String firstName, lastName, address, city, state;
     int zip;
@@ -6,7 +7,9 @@ class Contact {
 }
 
 public class Day9Assignment1 {
+
     static ArrayList<Contact> list = new ArrayList<>();
+
     public static void addContact() {
         Scanner sc = new Scanner(System.in);
 
@@ -25,24 +28,44 @@ public class Day9Assignment1 {
 
         System.out.println("Contact added!");
     }
-    public static void editContact() {
-        Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter First Name to Edit: ");
-        String name = sc.nextLine();
+    public static void editContact(String name) {
+        Scanner sc = new Scanner(System.in);
 
         for (Contact c : list) {
             if (c.firstName.equals(name)) {
-                System.out.print("Enter New City: ");
+
+                System.out.print("Enter new city: ");
                 c.city = sc.nextLine();
+
                 System.out.println("Contact updated!");
                 return;
             }
         }
+
         System.out.println("Contact not found!");
     }
+
+    public static void deleteContact(String name) {
+
+        Iterator<Contact> it = list.iterator();
+
+        while (it.hasNext()) {
+            Contact c = it.next();
+
+            if (c.firstName.equals(name)) {
+                it.remove();
+                System.out.println("Contact deleted!");
+                return;
+            }
+        }
+
+        System.out.println("Contact not found!");
+    }
+
     public static void main(String[] args) {
         addContact();
-        editContact();
+        editContact("John");
+        deleteContact("John");
     }
 }
