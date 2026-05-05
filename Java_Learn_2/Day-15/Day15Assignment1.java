@@ -31,7 +31,7 @@ class MyHashMap<K, V> {
 
         for (MyMapNode<K, V> node : bucket) {
             if (node.key.equals(key)) {
-                node.value = value; // update
+                node.value = value;
                 return;
             }
         }
@@ -100,7 +100,6 @@ public class Day15Assignment1 {
         System.out.println("\nWord Frequency (UC2):");
         map2.display();
         map2.remove("avoidable");
-
         System.out.println("\nAfter Removing 'avoidable' (UC3):");
         map2.display();
     }
