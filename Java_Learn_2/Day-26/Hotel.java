@@ -24,4 +24,19 @@ public class Hotel {
 
     }
 
+
+    public int calculateRate(
+            int weekdays,
+            int weekends
+    ){
+
+        return
+                weekdays *
+                        weekdayRate
+                        +
+                        weekends *
+                                weekendRate;
+
+    }
+
 }

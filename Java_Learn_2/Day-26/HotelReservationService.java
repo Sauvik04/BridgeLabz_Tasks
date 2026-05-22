@@ -8,7 +8,7 @@ public class HotelReservationService {
 
     public void addHotel(
             Hotel hotel
-    ) {
+    ){
 
         hotels.add(
                 hotel
@@ -17,56 +17,35 @@ public class HotelReservationService {
     }
 
 
-    public void showHotels() {
-
-        for (
-                Hotel hotel :
-                hotels
-        ) {
-
-            System.out.println(
-
-                    hotel.hotelName
-
-                            +
-
-                            " Weekday : $"
-
-                            +
-
-                            hotel.weekdayRate
-
-                            +
-
-                            " Weekend : $"
-
-                            +
-
-                            hotel.weekendRate
-
-            );
-
-        }
-
-    }
-
-
-    public Hotel findCheapest() {
+    public Hotel findCheapestHotel(
+            int weekdays,
+            int weekends
+    ){
 
         Hotel cheapest =
                 hotels.get(0);
 
 
-        for (
+        for(
                 Hotel hotel :
                 hotels
-        ) {
+        ){
 
-            if (
-                    hotel.weekdayRate
+            if(
+
+                    hotel.calculateRate(
+                            weekdays,
+                            weekends
+                    )
+
                             <
-                            cheapest.weekdayRate
-            ) {
+
+                            cheapest.calculateRate(
+                                    weekdays,
+                                    weekends
+                            )
+
+            ){
 
                 cheapest =
                         hotel;

@@ -9,51 +9,63 @@ public class HotelReservation {
 
 
         service.addHotel(
-
                 new Hotel(
                         "Lakewood",
                         110,
                         90
                 )
-
         );
 
 
         service.addHotel(
-
                 new Hotel(
                         "Bridgewood",
                         150,
                         50
                 )
-
         );
 
 
         service.addHotel(
-
                 new Hotel(
                         "Ridgewood",
                         220,
                         150
                 )
-
         );
 
 
-        service.showHotels();
+        int weekdays =
+                1;
+
+        int weekends =
+                1;
 
 
         Hotel cheapest =
-                service.findCheapest();
+                service.findCheapestHotel(
+                        weekdays,
+                        weekends
+                );
 
 
-        System.out.println();
+        int total =
+                cheapest.calculateRate(
+                        weekdays,
+                        weekends
+                );
+
 
         System.out.println(
-                "Cheapest : "
+                "Cheapest Hotel : "
                         +
                         cheapest.hotelName
+        );
+
+        System.out.println(
+                "Total Rate : $"
+                        +
+                        total
         );
 
     }
