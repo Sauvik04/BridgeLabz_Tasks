@@ -9,26 +9,35 @@ public class HotelReservation {
 
 
         service.addHotel(
+
                 new Hotel(
                         "Lakewood",
-                        110
+                        110,
+                        90
                 )
+
         );
 
 
         service.addHotel(
+
                 new Hotel(
                         "Bridgewood",
-                        160
+                        150,
+                        50
                 )
+
         );
 
 
         service.addHotel(
+
                 new Hotel(
                         "Ridgewood",
-                        220
+                        220,
+                        150
                 )
+
         );
 
 

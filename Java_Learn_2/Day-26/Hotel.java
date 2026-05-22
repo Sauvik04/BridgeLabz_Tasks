@@ -1,12 +1,26 @@
 public class Hotel {
 
     String hotelName;
-    int rate;
 
-    public Hotel(String hotelName, int rate) {
+    int weekdayRate;
 
-        this.hotelName = hotelName;
-        this.rate = rate;
+    int weekendRate;
+
+
+    public Hotel(
+            String hotelName,
+            int weekdayRate,
+            int weekendRate
+    ) {
+
+        this.hotelName =
+                hotelName;
+
+        this.weekdayRate =
+                weekdayRate;
+
+        this.weekendRate =
+                weekendRate;
 
     }
 

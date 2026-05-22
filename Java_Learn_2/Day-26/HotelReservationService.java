@@ -25,11 +25,25 @@ public class HotelReservationService {
         ) {
 
             System.out.println(
+
                     hotel.hotelName
+
                             +
-                            " $"
+
+                            " Weekday : $"
+
                             +
-                            hotel.rate
+
+                            hotel.weekdayRate
+
+                            +
+
+                            " Weekend : $"
+
+                            +
+
+                            hotel.weekendRate
+
             );
 
         }
@@ -42,15 +56,16 @@ public class HotelReservationService {
         Hotel cheapest =
                 hotels.get(0);
 
+
         for (
                 Hotel hotel :
                 hotels
         ) {
 
             if (
-                    hotel.rate
+                    hotel.weekdayRate
                             <
-                            cheapest.rate
+                            cheapest.weekdayRate
             ) {
 
                 cheapest =
